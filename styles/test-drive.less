@@ -4,5 +4,37 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
-.test-drive {
+.shark-right {
+  position: absolute;
+  top: 86%;
+  left: -200px;
+  z-index: 10;
+  background-color: red;
+
+  animation-duration: 9s;
+  animation-name: goLeft;
+  animation-iteration-count: infinite;
+
+  -moz-animation-duration: 9s;
+  -moz-animation-name: goLeft;
+  -moz-animation-iteration-count: infinite;
 }
+
+@keyframes goLeft {
+  from {
+    -webkit-transform: translate(1920px,0);
+  }
+
+  to {
+    -webkit-transform: translate(0,0);
+  }
+}
+
+@-moz-keyframes goLeft {
+  from {
+    -moz-transform: translate(0,0);
+  }
+
+  to {
+    -moz-transform: translate(1920px,0);
+  }

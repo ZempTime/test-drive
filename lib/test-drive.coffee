@@ -15,6 +15,7 @@ module.exports = TestDrive =
 
     # Register command that toggles this view
     @subscriptions.add atom.commands.add 'atom-workspace', 'test-drive:toggle': => @toggle()
+    @sound = new Audio('atom://test-drive/styles/omnom.mp3')
 
   deactivate: ->
     @modalPanel.destroy()
@@ -33,4 +34,5 @@ module.exports = TestDrive =
       editor = atom.workspace.getActiveTextEditor()
       words = editor.getText().split(/\s+/).length
       @testDriveView.setCount(words)
+      @sound.play()
       @modalPanel.show()
