@@ -1,0 +1,18 @@
+{
+  "name": "test-drive",
+  "main": "./lib/test-drive",
+  "version": "0.0.0",
+  "description": "Test Package Don't Upvote",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "test-drive:toggle"
+  },
+  "repository": "https://github.com/ZempTime/test-drive",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
