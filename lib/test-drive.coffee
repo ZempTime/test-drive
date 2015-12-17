@@ -30,4 +30,7 @@ module.exports = TestDrive =
     if @modalPanel.isVisible()
       @modalPanel.hide()
     else
+      editor = atom.workspace.getActiveTextEditor()
+      words = editor.getText().split(/\s+/).length
+      @testDriveView.setCount(words)
       @modalPanel.show()
